@@ -11,6 +11,25 @@ struct Task { //Task struct holds task details
 	int priority;
 };
 
+void addTasks(vector<Task>& tasks) { //function adds multiple tasks to list
+	char userInput;
+	do {
+		Task newTask;
+		cout << "Enter task description: ";
+		cin.ignore();
+		getline(cin, newTask.description);
+		cout << "Enter due date: ";
+		cin >> newTask.dueDate;
+		cout << "Enter priority level (1-5): ";
+		cin >> newTask.priority;
+
+		tasks.push_back(newTask);
+		cout << "Task added successfully!\n";
+
+		cout << "Add another task? (y/n): ";
+		cin >> userInput;
+	} while (userInput == 'y' || userInput == 'Y');
+}
 
 int main() {
 	
@@ -36,15 +55,19 @@ int main() {
 		try {
 			switch (userInput) {
 			case 'a'://adds item to to-do list
-
+			case 'A':
+				addTasks(tasks);
 				break;
 			case 'v': //view and siplay current list
+			case 'V':
 
 				break;
 			case 'r': //removes item from to-do list
+			case 'R':
 
 				break;
 			case 'q': //ends program
+			case 'Q':
 				cout << "Exiting...\n";
 				cout << endl;
 				break;
