@@ -24,11 +24,11 @@ int main() {
 		cout << "   Add, View, and Remove Tasks \n";
 		cout << "----------------------------------------\n";
 		cout << endl;
-		cout << "Select from the following:" << endl;
-		cout << "[a]dd task to list" << endl;
-		cout << "[v]iew list" << endl;
-		cout << "[r]emove task from list" << endl;
-		cout << "[q]uit and leave program" << endl;
+		cout << "Select from the following: \n";
+		cout << "[a]dd task to list \n";
+		cout << "[v]iew list \n";
+		cout << "[r]emove task from list \n";
+		cout << "[q]uit and leave program \n";
 		cout << endl;
 
 		cin >> userInput;
@@ -43,6 +43,10 @@ int main() {
 				break;
 			case 'r': //removes item from to-do list
 
+				break;
+			case 'q': //ends program
+				cout << "Exiting...\n";
+				cout << endl;
 				break;
 			default: //if wrong input entered
 				cout << "That is not a valid input. Press 'a' for add, 'v' for view, 'r' for remove, or 'q' for quit." << endl;
