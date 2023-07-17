@@ -1,16 +1,20 @@
 #include <iostream>
 #include <string>
-#include <cstdlib>
 
 using namespace std;
 
 int main() {
+	//Main screen and instructions for user 
 	cout << "          To-Do List \n";
 	cout << "   Add, View, and Remove Tasks \n";
 	cout << "----------------------------------------\n";
 	cout << endl;
+	cout << "Select from the following:" << endl;
+	cout << "[a]dd task to list" << endl;
+	cout << "[v]iew list" << endl;
+	cout << "[r]emove task from list" << endl;
+	cout << "[q]uit and leave program" << endl;
 	cout << endl;
-	cout << "Select (a)dd, (v)iew, (r)emove, or (q)uit" << endl;
 
 	char userInput;
 	cin >> userInput;
@@ -20,14 +24,14 @@ int main() {
 		cin >> userInput;
 
 		switch (userInput) {
-		case 'a':
-			//adds item to to-do list
+		case 'a'://adds item to to-do list
+			
 			break;
-		case 'v':
-			//views to-do list
+		case 'v': 
+			
 			break;
-		case 'r':
-			//removes item from to-do list
+		case 'r': //removes item from to-do list
+			
 			break;
 		default:
 			cout << "That is not a valid input. Press 'a' for add, 'v' for view, 'r' for remove, or 'q' for quit." << endl;
@@ -35,10 +39,9 @@ int main() {
 		}
 	}
 
-	if (userInput == 'q') {
-		cout << "Thank you using my To-do list. See you later!" << endl;
+	if (userInput == 'q') { //ends program
+		cout << "Thank you for using my To-do list progam. See you later!" << endl;
 	}
 
-	system("pause");
 	return 0;
 }
