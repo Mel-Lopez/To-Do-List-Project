@@ -20,8 +20,22 @@ void addTasks(vector<Task>& tasks) { //function adds multiple tasks to list
 		getline(cin, newTask.description);
 		cout << "Enter due date: ";
 		cin >> newTask.dueDate;
-		cout << "Enter priority level (1-5): ";
-		cin >> newTask.priority;
+
+		while (true) {
+			cout << "Enter priority level (1-5): ";
+			try {
+				cin >> newTask.priority;
+				if (newTask.priority < 1 || newTask.priority > 5) {
+					throw invalid_argument("Invalid priority level.");
+				}
+				break;
+			}
+			catch (const exception& e) {
+				cout << "Error: " << e.what() << " Please try again.\n";
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			}
+		}
 
 		tasks.push_back(newTask);
 		cout << "Task added successfully!\n";
