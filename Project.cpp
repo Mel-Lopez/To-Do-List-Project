@@ -15,6 +15,7 @@ void addTasks(vector<Task>& tasks) { //function adds multiple tasks to list
 	char userInput;
 	do {
 		Task newTask;
+		cout << endl;
 		cout << "Enter task description: ";
 		cin.ignore();
 		getline(cin, newTask.description);
@@ -43,6 +44,36 @@ void addTasks(vector<Task>& tasks) { //function adds multiple tasks to list
 		cout << "Add another task? (y/n): ";
 		cin >> userInput;
 	} while (userInput == 'y' || userInput == 'Y');
+}
+
+void removeTasks(vector<Task>& tasks) {
+	char choice;
+	do {
+		if (tasks.empty()) {
+			cout << "No tasks found.\n";
+			cout << endl;
+			return;
+		}
+
+		int taskIndex;
+		cout << "Enter the index of the task to remove: ";
+		cin >> taskIndex;
+
+		try {
+			if (taskIndex < 0 || taskIndex >= tasks.size()) {
+				throw out_of_range("Invalid task index.");
+			}
+
+			tasks.erase(tasks.begin() + taskIndex);
+			cout << "Task removed successfully!\n";
+		}
+		catch (const exception& e) {
+			cout << "Error: " << e.what() << "\n";
+		}
+
+		cout << "Remove another task? (y/n): ";
+		cin >> choice;
+	} while (choice == 'y' || choice == 'Y');
 }
 
 int main() {
@@ -78,7 +109,7 @@ int main() {
 				break;
 			case 'r': //removes item from to-do list
 			case 'R':
-
+				removeTasks(tasks);
 				break;
 			case 'q': //ends program
 			case 'Q':
