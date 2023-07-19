@@ -46,6 +46,24 @@ void addTasks(vector<Task>& tasks) { //function adds multiple tasks to list
 	} while (userInput == 'y' || userInput == 'Y');
 }
 
+// Function to display all tasks in the list
+void viewTasks(const vector<Task>& tasks) {
+	if (tasks.empty()) {
+		cout << "No tasks found.\n";
+		cout << endl;
+		return;
+	}
+
+	std::cout << "Tasks:\n";
+	for (const auto& task : tasks) {
+		cout << "Description: " << task.description << "\n";
+		cout << "Due Date: " << task.dueDate << "\n";
+		cout << "Priority: " << task.priority << "\n";
+		cout << "-------------------\n";
+	}
+}
+
+
 void removeTasks(vector<Task>& tasks) {
 	char choice;
 	do {
@@ -105,7 +123,7 @@ int main() {
 				break;
 			case 'v': //view and siplay current list
 			case 'V':
-
+				viewTasks(tasks);
 				break;
 			case 'r': //removes item from to-do list
 			case 'R':
