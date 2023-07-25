@@ -164,3 +164,136 @@ int main() {
 
 	return 0;
 }
+
+/*Sample output
+		  To-Do List
+   Add, View, and Remove Tasks
+----------------------------------------
+
+Select from the following:
+[a]dd task to list
+[v]iew list
+[r]emove task from list
+[q]uit and leave program
+
+p
+
+That is not a valid input. Press 'a' for add, 'v' for view, 'r' for remove, or 'q' for quit.
+
+		  To-Do List
+   Add, View, and Remove Tasks
+----------------------------------------
+
+Select from the following:
+[a]dd task to list
+[v]iew list
+[r]emove task from list
+[q]uit and leave program
+
+v
+
+No tasks found.
+
+		  To-Do List
+   Add, View, and Remove Tasks
+----------------------------------------
+
+Select from the following:
+[a]dd task to list
+[v]iew list
+[r]emove task from list
+[q]uit and leave program
+
+r
+
+No tasks found.
+
+		  To-Do List
+   Add, View, and Remove Tasks
+----------------------------------------
+
+Select from the following:
+[a]dd task to list
+[v]iew list
+[r]emove task from list
+[q]uit and leave program
+
+a
+
+Enter task description: Go for a walk
+Enter due date: today
+Enter priority level (1-5): 5
+Task added successfully!
+Add another task? (y/n): y
+
+Enter task description: Clean house
+Enter due date: today
+Enter priority level (1-5): 1
+Task added successfully!
+Add another task? (y/n): y
+
+Enter task description: Be a millionaire
+Enter due date: tomorrow
+Enter priority level (1-5): 2
+Task added successfully!
+Add another task? (y/n): n
+		  To-Do List
+   Add, View, and Remove Tasks
+----------------------------------------
+
+Select from the following:
+[a]dd task to list
+[v]iew list
+[r]emove task from list
+[q]uit and leave program
+
+v
+Tasks:
+Description: Go for a walk
+Due Date: today
+Priority: 5
+-------------------
+Description: Clean house
+Due Date: today
+Priority: 1
+-------------------
+Description: Be a millionaire
+Due Date: tomorrow
+Priority: 2
+-------------------
+		  To-Do List
+   Add, View, and Remove Tasks
+----------------------------------------
+
+Select from the following:
+[a]dd task to list
+[v]iew list
+[r]emove task from list
+[q]uit and leave program
+
+r
+Enter the index of the task to remove: 5
+Error: Invalid task index.
+Remove another task? (y/n): y
+Enter the index of the task to remove: 2
+Task removed successfully!
+Remove another task? (y/n): n
+		  To-Do List
+   Add, View, and Remove Tasks
+----------------------------------------
+
+Select from the following:
+[a]dd task to list
+[v]iew list
+[r]emove task from list
+[q]uit and leave program
+
+Q
+Exiting...
+
+Thank you for using my To-do list progam. See you later!
+
+C:\Users\melvi\source\repos\C++ Project\x64\Debug\C++ Project.exe (process 35616) exited with code 0.
+To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+Press any key to close this window . . .
+*/
