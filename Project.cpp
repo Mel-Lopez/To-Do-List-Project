@@ -142,6 +142,7 @@ int main() {
 			case 'Q':
 				cout << "Exiting...\n";
 				cout << endl;
+				userInput = 'q'; //Added so that program ends if upper Q is entered
 				break;
 			default: //If wrong input entered
 				cout << "That is not a valid input. Press 'a' for add, 'v' for view, 'r' for remove, or 'q' for quit." << endl;
