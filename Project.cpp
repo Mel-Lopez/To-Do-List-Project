@@ -5,13 +5,17 @@
 
 using namespace std;
 
-struct Task { //Task struct holds task details
+//Task struct to store task details
+struct Task { 
 	string description;
 	string dueDate;
 	int priority;
 };
 
-void addTasks(vector<Task>& tasks) { //function adds multiple tasks to list
+/*Function adds multiple tasks to the list
+User can input task description, due date and 
+priority level (1-5 scale).*/
+void addTasks(vector<Task>& tasks) { 
 	char userInput;
 	do {
 		Task newTask;
@@ -46,7 +50,8 @@ void addTasks(vector<Task>& tasks) { //function adds multiple tasks to list
 	} while (userInput == 'y' || userInput == 'Y');
 }
 
-// Function to display all tasks in the list
+/* Function to display all tasks in the list
+If list is empty, a message will display */
 void viewTasks(const vector<Task>& tasks) {
 	if (tasks.empty()) {
 		cout << "No tasks found.\n";
@@ -63,7 +68,9 @@ void viewTasks(const vector<Task>& tasks) {
 	}
 }
 
-
+/*Function to remove tasks from the list
+User can choose task to remove by it's index 
+(0 - onward) */
 void removeTasks(vector<Task>& tasks) {
 	char choice;
 	do {
@@ -96,9 +103,11 @@ void removeTasks(vector<Task>& tasks) {
 
 int main() {
 	
+	//Variables storing user input and manage to-do list tasks
 	char userInput;
 	vector<Task> tasks; 
 
+	//Loop to keep program running until the user chooses to quit
 	 do {
 
 		//Main screen and instructions for user 
@@ -117,24 +126,24 @@ int main() {
 
 		try {
 			switch (userInput) {
-			case 'a'://adds item to to-do list
+			case 'a'://Adds item to to-do list
 			case 'A':
 				addTasks(tasks);
 				break;
-			case 'v': //view and siplay current list
+			case 'v': //View and display current list
 			case 'V':
 				viewTasks(tasks);
 				break;
-			case 'r': //removes item from to-do list
+			case 'r': //Removes item from to-do list
 			case 'R':
 				removeTasks(tasks);
 				break;
-			case 'q': //ends program
+			case 'q': //Ends program
 			case 'Q':
 				cout << "Exiting...\n";
 				cout << endl;
 				break;
-			default: //if wrong input entered
+			default: //If wrong input entered
 				cout << "That is not a valid input. Press 'a' for add, 'v' for view, 'r' for remove, or 'q' for quit." << endl;
 				cout << endl;
 				break;
@@ -143,9 +152,9 @@ int main() {
 		catch (const exception& e) {
 			cout << "Error: " << e.what() << "\n";
 		}
-	} while (userInput != 'q');
+	} while (userInput != 'q'); //Program runs until 'q' is selected
 
-	if (userInput == 'q') { //ends program
+	if (userInput == 'q') { //Ends program and displays goodbye message
 		cout << "Thank you for using my To-do list progam. See you later!" << endl;
 	}
 
