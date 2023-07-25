@@ -9,7 +9,7 @@ using namespace std;
 struct Task { 
 	string description;
 	string dueDate;
-	int priority = 0; //Initializing due to warning to not have garbage data and to avoid unpredicatble behavior
+	int priority = 0; //Initializing due to warning to not have garbage data and to avoid unpredictable behavior
 };
 
 /*Function adds multiple tasks to the list
@@ -54,6 +54,7 @@ void addTasks(vector<Task>& tasks) {
 If list is empty, a message will display */
 void viewTasks(const vector<Task>& tasks) {
 	if (tasks.empty()) {
+		cout << endl; //whitespace between message and user input
 		cout << "No tasks found.\n";
 		cout << endl;
 		return;
@@ -74,9 +75,10 @@ User can choose task to remove by it's index
 void removeTasks(vector<Task>& tasks) {
 	char choice;
 	do {
-		if (tasks.empty()) {
+		if (tasks.empty()) {	
+			cout << endl; //whitespace between message and user input
 			cout << "No tasks found.\n";
-			cout << endl;
+			cout << endl; 
 			return;
 		}
 
@@ -145,6 +147,7 @@ int main() {
 				userInput = 'q'; //Added so that program ends if upper Q is entered
 				break;
 			default: //If wrong input entered
+				cout << endl; //whitespace between message and user input
 				cout << "That is not a valid input. Press 'a' for add, 'v' for view, 'r' for remove, or 'q' for quit." << endl;
 				cout << endl;
 				break;
