@@ -9,7 +9,7 @@ using namespace std;
 struct Task { 
 	string description;
 	string dueDate;
-	int priority;
+	int priority = 0; //Initializing due to warning to not have garbage data and to avoid unpredicatble behavior
 };
 
 /*Function adds multiple tasks to the list
