@@ -10,4 +10,4 @@ Implement robust error and exception handling mechanisms using try/catch blocks.
 
 I added both a due date and a priority level, as well as giving the option to add or remove various tasks at the same time. I opted to use a struct for faster performance and because I expect only a small amount of data to be stored while using the program. 
 
-To compile this code, use any C++ compiler, preferably Microsoft Visual Studio for best performance.
+To compile this code, click on the code button in the repository. Select the local tab and then 'Open with Visual Studio'.
